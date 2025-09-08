@@ -1,30 +1,30 @@
 Feature: Generate cache
 
-  Scenario: Manage wp-super-cache via CLI
-    Given a WP install
+  Scenario: Manage fp-super-cache via CLI
+    Given a FP install
 
-    When I try `wp super-cache status`
+    When I try `fp super-cache status`
     Then STDERR should contain:
       """
-      Error: WP Super Cache needs to be installed to use its WP-CLI commands.
+      Error: FP Super Cache needs to be installed to use its FP-CLI commands.
       """
 
-    When I run `wp plugin install wp-super-cache`
+    When I run `fp plugin install fp-super-cache`
     Then STDOUT should contain:
       """
       Plugin installed successfully.
       """
-    And the wp-content/plugins/wp-super-cache directory should exist
+    And the fp-content/plugins/fp-super-cache directory should exist
 
-    When I try `wp super-cache enable`
+    When I try `fp super-cache enable`
     Then STDERR should contain:
       """
-      Error: WP Super Cache needs to be activated to use its WP-CLI commands.
+      Error: FP Super Cache needs to be activated to use its FP-CLI commands.
       """
 
-    When I run `wp plugin activate wp-super-cache`
-    And I run `wp super-cache enable`
+    When I run `fp plugin activate fp-super-cache`
+    And I run `fp super-cache enable`
     Then STDOUT should contain:
       """
-      Success: The WP Super Cache is enabled.
+      Success: The FP Super Cache is enabled.
       """

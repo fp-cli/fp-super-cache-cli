@@ -20,7 +20,7 @@ cache:
 env:
   global:
     - PATH="$TRAVIS_BUILD_DIR/vendor/bin:$PATH"
-    - WP_CLI_BIN_DIR="$TRAVIS_BUILD_DIR/vendor/bin"
+    - FP_CLI_BIN_DIR="$TRAVIS_BUILD_DIR/vendor/bin"
 
 before_install:
   - |
@@ -52,22 +52,22 @@ jobs:
       env: BUILD=sniff
     - stage: test
       php: 7.2
-      env: WP_VERSION=latest
+      env: FP_VERSION=latest
     - stage: test
       php: 7.1
-      env: WP_VERSION=latest
+      env: FP_VERSION=latest
     - stage: test
       php: 7.0
-      env: WP_VERSION=latest
+      env: FP_VERSION=latest
     - stage: test
       php: 5.6
-      env: WP_VERSION=latest
+      env: FP_VERSION=latest
     - stage: test
       php: 5.6
-      env: WP_VERSION=3.7.11
+      env: FP_VERSION=3.7.11
     - stage: test
       php: 5.6
-      env: WP_VERSION=trunk
+      env: FP_VERSION=trunk
     - stage: test
       php: 5.4
-      env: WP_VERSION=5.1
+      env: FP_VERSION=5.1

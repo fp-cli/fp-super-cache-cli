@@ -1,28 +1,28 @@
 {
-    "name": "wp-cli/wp-super-cache-cli",
-    "type": "wp-cli-package",
-    "description": "Add a `wp super-cache` command to support the WP Super Cache plug-in",
+    "name": "fp-cli/fp-super-cache-cli",
+    "type": "fp-cli-package",
+    "description": "Add a `fp super-cache` command to support the FP Super Cache plug-in",
     "keywords": [
-        "wp-cli",
+        "fp-cli",
         "super-cache",
         "cache"
     ],
-    "homepage": "https://github.com/wp-cli/wp-super-cache-cli",
+    "homepage": "https://github.com/fp-cli/fp-super-cache-cli",
     "license": "MIT",
     "authors": [
         {
-            "name": "WP-CLI Team",
-            "homepage": "http://github.com/wp-cli",
+            "name": "FP-CLI Team",
+            "homepage": "http://github.com/fp-cli",
             "role": "Developer"
         }
     ],
     "require": {
         "php": ">=5.4",
-        "wp-cli/wp-cli": "^2"
+        "fp-cli/fp-cli": "^2"
     },
     "require-dev": {
-        "wp-cli/extension-command": "^2",
-        "wp-cli/wp-cli-tests": "^2.0.7"
+        "fp-cli/extension-command": "^2",
+        "fp-cli/fp-cli-tests": "^2.0.7"
     },
     "config": {
         "platform": {
@@ -39,7 +39,7 @@
             "": "src/"
         },
         "files": [
-            "wp-super-cache-cli.php"
+            "fp-super-cache-cli.php"
         ]
     },
     "minimum-stability": "dev",
